@@ -5,15 +5,14 @@ import { motion } from 'framer-motion'
 export default function About() {
   const paragraphVariants = {
     hidden: { opacity: 0, y: 20 },
-    visible: (i: number) => ({
+    visible: {
       opacity: 1,
       y: 0,
       transition: {
-        delay: i * 0.2,
         duration: 0.6,
         ease: "easeOut"
       }
-    })
+    }
   }
 
   return (
@@ -30,31 +29,31 @@ export default function About() {
         </motion.h2>
         <div className="space-y-6 text-gray-600 text-lg leading-relaxed">
           <motion.p
-            custom={0}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
             variants={paragraphVariants}
+            transition={{ delay: 0 }}
           >
             Direct Monarch helps businesses and organizations source goods through competitive tendering. 
             We participate in formal procurement tenders to secure the best pricing and quality for our clients.
           </motion.p>
           <motion.p
-            custom={1}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
             variants={paragraphVariants}
+            transition={{ delay: 0.2 }}
           >
             We also assist clients in finding specific items via tender processes when needed. 
             Beyond procurement, we handle customs clearance so shipments move smoothly through ports.
           </motion.p>
           <motion.p
-            custom={2}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
             variants={paragraphVariants}
+            transition={{ delay: 0.4 }}
           >
             In addition, we bid on port auctions for unclaimed or surplus cargo, giving clients access to items at auction. 
             Finally, we manage disposal and destruction contracts with customs authorities for excess or seized items, 
