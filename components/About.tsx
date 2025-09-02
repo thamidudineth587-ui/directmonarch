@@ -1,20 +1,8 @@
 'use client'
 
-import { motion, Variants } from 'framer-motion'
+import { motion } from 'framer-motion'
 
 export default function About() {
-  const paragraphVariants: Variants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.6,
-        ease: "easeOut" as const
-      }
-    }
-  }
-
   return (
     <section id="about" className="py-24 bg-white">
       <div className="max-w-5xl mx-auto px-6 lg:px-8">
@@ -29,31 +17,28 @@ export default function About() {
         </motion.h2>
         <div className="space-y-6 text-gray-600 text-lg leading-relaxed">
           <motion.p
-            initial="hidden"
-            whileInView="visible"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            variants={paragraphVariants}
-            transition={{ delay: 0 }}
+            transition={{ duration: 0.6, delay: 0 }}
           >
             Direct Monarch helps businesses and organizations source goods through competitive tendering. 
             We participate in formal procurement tenders to secure the best pricing and quality for our clients.
           </motion.p>
           <motion.p
-            initial="hidden"
-            whileInView="visible"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            variants={paragraphVariants}
-            transition={{ delay: 0.2 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
           >
             We also assist clients in finding specific items via tender processes when needed. 
             Beyond procurement, we handle customs clearance so shipments move smoothly through ports.
           </motion.p>
           <motion.p
-            initial="hidden"
-            whileInView="visible"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            variants={paragraphVariants}
-            transition={{ delay: 0.4 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
           >
             In addition, we bid on port auctions for unclaimed or surplus cargo, giving clients access to items at auction. 
             Finally, we manage disposal and destruction contracts with customs authorities for excess or seized items, 
