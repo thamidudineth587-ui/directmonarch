@@ -93,11 +93,11 @@ export default function WhyChooseUs() {
                 whileHover={{ y: -5, transition: { duration: 0.2 } }}
               >
                 <motion.div 
-                  className="bg-primary-100 w-14 h-14 rounded-lg flex items-center justify-center mb-6 group-hover:bg-primary-600 transition-colors"
+                  className="bg-primary-100 w-14 h-14 rounded-lg flex items-center justify-center mb-6 group-hover:bg-accent-400 transition-colors"
                   whileHover={{ rotate: 5 }}
                   transition={{ type: "spring", stiffness: 300 }}
                 >
-                  <Icon className="w-7 h-7 text-primary-600 group-hover:text-white transition-colors" />
+                  <Icon className="w-7 h-7 text-primary-600 group-hover:text-primary-900 transition-colors" />
                 </motion.div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">
                   {benefit.title}
@@ -121,7 +121,7 @@ export default function WhyChooseUs() {
               </p>
               <a
                 href="#contact"
-                className="inline-flex items-center bg-white text-primary-600 px-6 py-3 rounded-lg font-semibold hover:bg-primary-50 transition-colors"
+                className="inline-flex items-center bg-accent-400 text-primary-900 px-6 py-3 rounded-lg font-semibold hover:bg-accent-300 transition-colors"
               >
                 Start Your Journey
                 <CheckCircle className="ml-2 w-5 h-5" />

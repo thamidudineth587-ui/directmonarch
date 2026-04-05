@@ -156,14 +156,14 @@ export default function Services() {
                       viewport={{ once: true }}
                       transition={{ duration: 0.3, delay: index * 0.1 + idx * 0.05 }}
                     >
-                      <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 text-accent-500 mr-3 mt-0.5 flex-shrink-0" />
                       <span className="text-gray-700">{feature}</span>
                     </motion.li>
                   ))}
                 </ul>
 
                 <div className="flex items-center justify-between pt-6 border-t border-gray-200">
-                  <span className="inline-flex items-center px-3 py-1 bg-green-100 text-green-700 rounded-full text-sm font-medium">
+                  <span className="inline-flex items-center px-3 py-1 bg-accent-100 text-accent-700 rounded-full text-sm font-medium">
                     {service.highlight}
                   </span>
                   <a
@@ -185,7 +185,7 @@ export default function Services() {
           </p>
           <a
             href="#contact"
-            className="inline-flex items-center bg-primary-600 text-white px-8 py-4 rounded-lg hover:bg-primary-700 transition-colors font-semibold shadow-lg hover:shadow-xl"
+            className="inline-flex items-center bg-accent-400 text-primary-900 px-8 py-4 rounded-lg hover:bg-accent-500 transition-colors font-semibold shadow-lg hover:shadow-xl"
           >
             <Globe className="mr-2 w-5 h-5" />
             Discuss Your Requirements

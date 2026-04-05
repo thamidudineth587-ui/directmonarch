@@ -7,6 +7,10 @@ const inter = Inter({ subsets: ['latin'] })
 export const metadata: Metadata = {
   title: 'Direct Monarch - Procurement & Customs Services',
   description: 'Specialized procurement and customs services firm offering competitive tendering, customs clearance, port auctions, and disposal services.',
+  icons: {
+    icon: '/logo.png',
+    apple: '/logo.png',
+  },
 }
 
 export default function RootLayout({

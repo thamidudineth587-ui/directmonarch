@@ -72,12 +72,12 @@ function StepCard({ step, index, isEven }: { step: any, index: number, isEven: b
         <motion.div 
           className="bg-white border-4 border-primary-600 w-12 h-12 rounded-full flex items-center justify-center"
           animate={{ 
-            borderColor: ["#2563eb", "#60a5fa", "#2563eb"],
+            borderColor: ["#1a6a82", "#38a1b8", "#1a6a82"],
           }}
           transition={{ duration: 2, repeat: Infinity }}
         >
           <motion.div 
-            className="bg-primary-600 w-4 h-4 rounded-full"
+            className="bg-accent-400 w-4 h-4 rounded-full"
             animate={{ scale: [1, 1.3, 1] }}
             transition={{ duration: 2, repeat: Infinity }}
           />
@@ -167,7 +167,7 @@ export default function Process() {
         <div className="relative" ref={containerRef}>
           <div className="absolute hidden lg:block left-1/2 transform -translate-x-1/2 w-0.5 h-full bg-gray-200" />
           <motion.div 
-            className="absolute hidden lg:block left-1/2 transform -translate-x-1/2 w-0.5 h-full bg-gradient-to-b from-primary-300 via-primary-500 to-primary-300 origin-top"
+            className="absolute hidden lg:block left-1/2 transform -translate-x-1/2 w-0.5 h-full bg-gradient-to-b from-accent-300 via-primary-500 to-accent-300 origin-top"
             style={{ scaleY }}
           />
           
@@ -198,7 +198,7 @@ export default function Process() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="#contact"
-                className="inline-flex items-center justify-center bg-white text-primary-600 px-8 py-4 rounded-lg font-semibold hover:bg-primary-50 transition-colors shadow-lg"
+                className="inline-flex items-center justify-center bg-accent-400 text-primary-900 px-8 py-4 rounded-lg font-semibold hover:bg-accent-300 transition-colors shadow-lg"
               >
                 Get Started Today
                 <ArrowRight className="ml-2 w-5 h-5" />

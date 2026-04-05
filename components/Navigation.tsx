@@ -1,7 +1,8 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { Menu, X, Ship, Globe, Package, FileText } from 'lucide-react'
+import { Menu, X } from 'lucide-react'
+import Image from 'next/image'
 
 export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -34,13 +35,20 @@ export default function Navigation() {
 
   return (
     <nav className={`fixed w-full z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-white shadow-lg' : 'bg-transparent'
+      isScrolled ? 'bg-white/95 backdrop-blur-sm shadow-lg' : 'bg-transparent'
     }`}>
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
-          <div className="flex items-center space-x-2">
-            <Ship className="h-8 w-8 text-primary-600" />
-            <span className="text-2xl font-light text-primary-900">Direct Monarch</span>
+          <div className="flex items-center space-x-3">
+            <Image
+              src="/logo.png"
+              alt="Direct Monarch"
+              width={48}
+              height={48}
+              className="rounded-full"
+              priority
+            />
+            <span className="text-2xl font-semibold text-primary-900">Direct Monarch</span>
           </div>
 
           <div className="hidden md:flex items-center space-x-8">
@@ -48,14 +56,14 @@ export default function Navigation() {
               <button
                 key={link.href}
                 onClick={() => scrollToSection(link.href)}
-                className="text-gray-700 hover:text-primary-600 transition-colors font-medium"
+                className="text-gray-700 hover:text-accent-500 transition-colors font-medium"
               >
                 {link.label}
               </button>
             ))}
             <button
               onClick={() => scrollToSection('#contact')}
-              className="bg-primary-600 text-white px-6 py-2 rounded-lg hover:bg-primary-700 transition-colors"
+              className="bg-accent-400 text-primary-900 px-6 py-2 rounded-lg hover:bg-accent-500 transition-colors font-semibold shadow-md hover:shadow-lg"
             >
               Get Quote
             </button>
@@ -81,14 +89,14 @@ export default function Navigation() {
               <button
                 key={link.href}
                 onClick={() => scrollToSection(link.href)}
-                className="block w-full text-left py-2 text-gray-700 hover:text-primary-600 transition-colors"
+                className="block w-full text-left py-2 text-gray-700 hover:text-accent-500 transition-colors"
               >
                 {link.label}
               </button>
             ))}
             <button
               onClick={() => scrollToSection('#contact')}
-              className="w-full bg-primary-600 text-white px-6 py-2 rounded-lg hover:bg-primary-700 transition-colors"
+              className="w-full bg-accent-400 text-primary-900 px-6 py-2 rounded-lg hover:bg-accent-500 transition-colors font-semibold"
             >
               Get Quote
             </button>

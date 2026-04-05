@@ -1,4 +1,5 @@
-import { Ship, Facebook, Twitter, Linkedin, Instagram, ArrowUpRight } from 'lucide-react'
+import { Facebook, Twitter, Linkedin, Instagram, ArrowUpRight } from 'lucide-react'
+import Image from 'next/image'
 
 export default function Footer() {
   const currentYear = new Date().getFullYear()
@@ -19,12 +20,18 @@ export default function Footer() {
   ]
 
   return (
-    <footer className="bg-gray-900 text-gray-300">
+    <footer className="bg-primary-900 text-gray-300">
       <div className="max-w-7xl mx-auto px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div className="lg:col-span-2">
-            <div className="flex items-center space-x-2 mb-6">
-              <Ship className="h-10 w-10 text-primary-400" />
+            <div className="flex items-center space-x-3 mb-6">
+              <Image
+                src="/logo.png"
+                alt="Direct Monarch"
+                width={56}
+                height={56}
+                className="rounded-full"
+              />
               <span className="text-2xl font-bold text-white">Direct Monarch</span>
             </div>
             <p className="text-gray-400 mb-6 max-w-md">
@@ -32,16 +39,16 @@ export default function Footer() {
               Streamlining international commerce with expertise and efficiency.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="bg-gray-800 p-2 rounded-lg hover:bg-primary-600 transition-colors">
+              <a href="#" className="bg-primary-800 p-2 rounded-lg hover:bg-accent-500 hover:text-primary-900 transition-colors">
                 <Facebook className="w-5 h-5" />
               </a>
-              <a href="#" className="bg-gray-800 p-2 rounded-lg hover:bg-primary-600 transition-colors">
+              <a href="#" className="bg-primary-800 p-2 rounded-lg hover:bg-accent-500 hover:text-primary-900 transition-colors">
                 <Twitter className="w-5 h-5" />
               </a>
-              <a href="#" className="bg-gray-800 p-2 rounded-lg hover:bg-primary-600 transition-colors">
+              <a href="#" className="bg-primary-800 p-2 rounded-lg hover:bg-accent-500 hover:text-primary-900 transition-colors">
                 <Linkedin className="w-5 h-5" />
               </a>
-              <a href="#" className="bg-gray-800 p-2 rounded-lg hover:bg-primary-600 transition-colors">
+              <a href="#" className="bg-primary-800 p-2 rounded-lg hover:bg-accent-500 hover:text-primary-900 transition-colors">
                 <Instagram className="w-5 h-5" />
               </a>
             </div>
@@ -54,7 +61,7 @@ export default function Footer() {
                 <li key={link.label}>
                   <a
                     href={link.href}
-                    className="hover:text-primary-400 transition-colors flex items-center group"
+                    className="hover:text-accent-400 transition-colors flex items-center group"
                   >
                     {link.label}
                     <ArrowUpRight className="w-3 h-3 ml-1 opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -71,7 +78,7 @@ export default function Footer() {
                 <li key={service.label}>
                   <a
                     href={service.href}
-                    className="hover:text-primary-400 transition-colors flex items-center group"
+                    className="hover:text-accent-400 transition-colors flex items-center group"
                   >
                     {service.label}
                     <ArrowUpRight className="w-3 h-3 ml-1 opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -82,10 +89,10 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 pt-8 border-t border-gray-800">
+        <div className="mt-12 pt-8 border-t border-primary-800">
           <div className="grid md:grid-cols-2 gap-4">
             <div className="text-sm">
-              <p>© {currentYear} Direct Monarch. All rights reserved.</p>
+              <p>&copy; {currentYear} Direct Monarch. All rights reserved.</p>
             </div>
             <div className="text-sm md:text-right">
               <p>

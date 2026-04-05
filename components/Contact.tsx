@@ -55,8 +55,8 @@ export default function Contact() {
                 <div>
                   <p className="text-primary-200 mb-1">Visit Us</p>
                   <p className="text-white text-lg">
-                    No 96/2/4, Consistory Building<br />
-                    Colombo 11, Sri Lanka
+                    #428, Negombo Road<br />
+                    Kandana, Sri Lanka
                   </p>
                 </div>
               </div>
@@ -78,15 +78,15 @@ export default function Contact() {
             </div>
           </div>
 
-          <div className="bg-gradient-to-r from-yellow-400 to-orange-400 rounded-2xl p-8 text-center">
-            <h4 className="text-2xl font-bold text-gray-900 mb-3">
+          <div className="bg-gradient-to-r from-accent-400 to-accent-500 rounded-2xl p-8 text-center">
+            <h4 className="text-2xl font-bold text-primary-900 mb-3">
               Quick Response Guarantee
             </h4>
-            <p className="text-gray-800 mb-4">
+            <p className="text-primary-800 mb-4">
               We respond to all inquiries within 24 hours. For urgent matters, please call us directly.
             </p>
             <div className="flex items-center justify-center space-x-2">
-              <span className="inline-flex items-center px-4 py-2 bg-white/90 rounded-full text-sm font-semibold text-gray-900">
+              <span className="inline-flex items-center px-4 py-2 bg-white/90 rounded-full text-sm font-semibold text-primary-900">
                 <Clock className="w-4 h-4 mr-1" />
                 24hr Response Time
               </span>
